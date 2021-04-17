@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top">
+    <div class="title">
+      <h1>Social Media Dashboard</h1>
+      <h2>Total Followers: 23,004</h2>
+    </div>
+    <div class="mode">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" class="checkbox">
+        <span class="slider round" onclick="changeColor()"></span>
+      </label>
+    </div>
+  </div>
+  <div class="general">
+    <div class="element fb">
+      <div class="tag">
+        <div class="fb"></div>
+        <span>@nathanf</span>
+      </div>
+      <div class="followers">
+        <div class="number">1987</div>
+        <div class="text">Followers</div>
+      </div>
+      <div class="today profit">
+        <div><span class="icon"></span> 12 Today</div>
+      </div>
+    </div>
+    <div class="element tt">
+      <div class="tag">
+        <div class="tt"></div>
+        <span>@nathanf</span>
+      </div>
+      <div class="followers">
+        <div class="number">1044</div>
+        <div class="text">Followers</div>
+      </div>
+      <div class="today profit">
+        <div><span class="icon"></span> 99 Today</div>
+      </div>
+    </div>
+    <div class="element insta">
+      <div class="tag">
+        <div class="insta"></div>
+        <span>@realnathanf</span>
+      </div>
+      <div class="followers">
+        <div class="number">11k</div>
+        <div class="text">Followers</div>
+      </div>
+      <div class="today profit">
+        <div><span class="icon"></span> 1099 Today</div>
+      </div>
+    </div>
+    <div class="element yt">
+      <div class="tag">
+        <div class="yt"></div>
+        <span>Nathan F.</span>
+      </div>
+      <div class="followers">
+        <div class="number">8239</div>
+        <div class="text">Subscribers</div>
+      </div>
+      <div class="today loss">
+        <div><span class="icon"></span> 144 Today</div>
+      </div>
+    </div>
+  </div>
+  <div class="overview">
+    <h1>Overview - Today</h1>
+    <div class="boxes">
+      <div class="box">
+        <div class="upper fb">
+          <div class="info">Page Views</div>
+          <div class="fb"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">87</div>
+          <div class="gap profit"><span class="icon"></span> 3%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper fb">
+          <div class="info">Likes</div>
+          <div class="fb"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">52</div>
+          <div class="gap loss"><span class="icon"></span> 2%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper insta">
+          <div class="info">Likes</div>
+          <div class="insta"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">5462</div>
+          <div class="gap profit"><span class="icon"></span> 2257%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper insta">
+          <div class="info">Profile Views</div>
+          <div class="insta"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">52k</div>
+          <div class="gap profit"><span class="icon"></span> 1375%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper tt">
+          <div class="info">Retweets</div>
+          <div class="tt"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">117</div>
+          <div class="gap profit"><span class="icon"></span> 303%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper tt">
+          <div class="info">Likes</div>
+          <div class="tt"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">507</div>
+          <div class="gap profit"><span class="icon"></span> 553%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper yt">
+          <div class="info">Likes</div>
+          <div class="yt"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">107</div>
+          <div class="gap loss"><span class="icon"></span> 19%</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="upper yt">
+          <div class="info">Total Views</div>
+          <div class="yt"></div>
+        </div>
+        <div class="bottom">
+          <div class="amount">1407</div>
+          <div class="gap loss"><span class="icon"></span> 12%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

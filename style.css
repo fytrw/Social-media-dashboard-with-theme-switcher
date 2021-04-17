@@ -1,0 +1,499 @@
+:root {
+    /* Primary */
+    --profit: hsl(163, 72%, 41%);
+    --loss: hsl(356, 69%, 56%);
+    --fb: hsl(208, 92%, 53%);
+    --tt: hsl(203, 89%, 53%);
+    --insta1: hsl(37, 97%, 70%);
+    --insta2: hsl(329, 70%, 58%);
+    --yt: hsl(348, 97%, 39%);
+    /* deffault dark theme */
+    --toggle1: hsl(210, 78%, 56%);
+    --toggle2: hsl(146, 68%, 55%);
+    --togglecircle: #333A55;
+    --bg: hsl(230, 17%, 14%);
+    --topbg: hsl(232, 19%, 15%);
+    --cardbg: hsl(228, 28%, 20%);
+    --lighttext: hsl(228, 34%, 66%);
+    --text: hsl(0, 0%, 100%);
+    --hoverbg: #333A55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+}
+
+body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 244px;
+    background-color: var(--topbg);
+    border-radius: 0 0 20px 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    width: 100%;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 46px;
+    margin-top: 36px;
+}
+
+
+
+.top .title h1 {
+    margin-bottom: 3px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top .title h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--lighttext);
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+}
+
+.top .mode>span {
+    display: block;
+    line-height: 24px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+/* The switch - the box around the slider */
+.mode .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.mode .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.mode .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(190deg, var(--toggle2), var(--toggle1));
+    cursor: pointer;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.mode .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--togglecircle);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.mode input:checked+.slider {
+    background-image: linear-gradient(#AEB3CB, #AEB3CB);
+}
+
+.mode input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background-color: #F1F3FA;
+}
+
+/* Rounded sliders */
+.mode .slider.round {
+    border-radius: 34px;
+}
+
+.mode .slider.round:before {
+    border-radius: 50%;
+}
+
+.general {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 46px;
+}
+
+.general .element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 216px;
+    background-color: var(--cardbg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.general .element:hover {
+    background-color: var(--hoverbg);
+}
+
+.general .element::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+.general .element.fb::after {
+    background-color: var(--fb);
+}
+
+.general .element.tt::after {
+    background-color: var(--tt);
+}
+
+.general .element.insta::after {
+    background-image: linear-gradient(90deg, var(--insta1), var(--insta2));
+}
+
+.general .element.yt::after {
+    background-color: var(--yt);
+}
+
+.element .tag {
+    display: flex;
+    line-height: 20px;
+    margin-bottom: 28px;
+    font-size: 12px;
+    color: var(--lighttext);
+}
+
+.element .tag span {
+    font-weight: bold;
+}
+
+.element.tt .tag {
+    line-height: 17px;
+    margin-bottom: 31px;
+}
+
+.element .tag .fb {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    background-image: url('images/icon-facebook.svg');
+    background-repeat: no-repeat;
+}
+
+.element .tag .tt {
+    display: block;
+    width: 20px;
+    height: 17px;
+    margin-right: 6px;
+    background-image: url('images/icon-twitter.svg');
+    background-repeat: no-repeat;
+}
+
+.element .tag .insta {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    background-image: url('images/icon-instagram.svg');
+    background-repeat: no-repeat;
+}
+
+
+
+.element .tag .yt {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    background-image: url('images/icon-youtube.svg');
+    background-repeat: no-repeat;
+}
+
+.element .followers {
+    margin-bottom: 25px;
+}
+
+.followers .number {
+    margin-bottom: 9px;
+    line-height: 48px;
+    font-size: 56px;
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+}
+
+.followers .text {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--lighttext);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.today div {
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+
+.today.profit div {
+    color: var(--profit);
+}
+
+.today div .icon {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    width: 8px;
+    height: 4px;
+    transform: translateY(-50%);
+    vertical-align: center;
+}
+
+.today.profit div .icon {
+    background-image: url('images/icon-up.svg');
+}
+
+.today.loss div .icon {
+    background-image: url('images/icon-down.svg');
+}
+
+.today.loss div {
+    color: var(--loss);
+}
+
+.overview h1 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.overview .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boxes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 125px;
+    padding: 22.5px 27.5px;
+    margin-bottom: 24px;
+    background-color: var(--cardbg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.boxes .box:hover {
+    background-color: var(--hoverbg);
+}
+
+.box .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.box .upper .info {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--lighttext);
+    line-height: 20px;
+}
+
+.box .upper.tt {
+    line-height: 17px;
+}
+
+.box .upper .fb {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/icon-facebook.svg');
+    background-repeat: no-repeat;
+}
+
+.box .upper .tt {
+    display: block;
+    width: 20px;
+    height: 17px;
+    background-image: url('images/icon-twitter.svg');
+    background-repeat: no-repeat;
+}
+
+
+.box .upper .insta {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/icon-instagram.svg');
+    background-repeat: no-repeat;
+}
+
+.box .upper .yt {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/icon-youtube.svg');
+    background-repeat: no-repeat;
+}
+
+.box .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box .bottom .amount {
+    font-size: 32px;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.box .bottom .gap {
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.box .bottom .gap.profit {
+    color: var(--profit);
+}
+
+.box .bottom .gap .icon {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    width: 8px;
+    height: 4px;
+    transform: translateY(-50%);
+    vertical-align: center;
+}
+
+.box .bottom .gap.profit .icon {
+    background-image: url('images/icon-up.svg');
+}
+
+.box .bottom .gap.loss {
+    color: var(--loss);
+}
+
+.box .bottom .gap.loss .icon {
+    background-image: url('images/icon-down.svg');
+}
+
+@media (orientation: portrait) {
+    body::before {
+        height: 235px;
+    }
+
+    .wrapper {
+        max-width: 86%;
+    }
+
+    .top {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+
+    .top .title {
+        width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--hoverbg);
+        margin-bottom: 16px;
+    }
+
+    .top .title h1 {
+        font-size: 24px;
+    }
+
+    .mode {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .top .mode>span {
+        color: var(--lighttext);
+    }
+
+    .general {
+        justify-content: center;
+        margin-bottom: 22px;
+    }
+
+    .general .element {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .boxes h1 {
+        margin-bottom: 27px;
+    }
+
+    .boxes .box {
+        width: 100%;
+    }
+
+    .overview {
+        margin-bottom: 22px;
+    }
+}
