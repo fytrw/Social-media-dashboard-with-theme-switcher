@@ -88,7 +88,7 @@ body::before {
     margin-right: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: var(--text);
+    color: var(--lighttext);
 }
 
 /* The switch - the box around the slider */
@@ -469,10 +469,6 @@ body::before {
     .mode {
         justify-content: space-between;
         width: 100%;
-    }
-
-    .top .mode>span {
-        color: var(--lighttext);
     }
 
     .general {
