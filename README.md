@@ -4,6 +4,6 @@
 ---
 ### Links
 
-[GithubPages Link]()
+[GithubPages Link](https://fytrw.github.io/Social-media-dashboard-with-theme-switcher/)
 
-[Vercel Link]()
+[Vercel Link](https://social-media-dashboard-with-theme-switcher-dusky.vercel.app/)
